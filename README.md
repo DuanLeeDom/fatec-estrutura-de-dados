@@ -45,8 +45,10 @@ Para executar e compreender os projetos contidos neste repositório, recomenda-s
 * Utilizar uma IDE de sua preferência, como:
 
   * **Visual Studio Code** (utilizado nas aulas)
-  * **NetBeans**
-  * **IntelliJ IDEA**
+  
+  IDEs Opcionais para o uso:  
+    * **NetBeans**
+    * **IntelliJ IDEA**
 * Conhecimentos prévios de lógica de programação
 
 ---
@@ -79,7 +81,7 @@ Para executar e compreender os projetos contidos neste repositório, recomenda-s
 
 ![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
 
-Este repositório contempla o material do 2º semestre de 2025 e será atualizado conforme o avanço das aulas e projetos.
+Este repositório contempla o material do 3º semestre de 2025 e será atualizado conforme o avanço das aulas e projetos.
 
 ---
 

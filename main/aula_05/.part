@@ -1,0 +1,21 @@
+/*
+ * Operações principais:
+ *  - Inserir
+ *  - Consultar
+ *  - Remover
+ *
+ * Inserir pode ocorrer em:
+ *  - Início
+ *  - Meio
+ *  - Fim
+ *
+ * Remover pode ocorrer em:
+ *  - Início
+ *  - Meio
+ *  - Fim
+ *
+ * Controle da estrutura:
+ *  - Referência para o primeiro elemento (início)
+ *  - Referência para o último elemento (fim)
+ *  - Quantidade total de elementos
+ */

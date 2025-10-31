@@ -1,4 +1,4 @@
-public class ArvoreBi<T extends Comparable<T>>  {
+public class ArvoreBi<T extends Comparable<T>> {
     private Node<T> raiz;
     private int ultimaBusca = 0;
 
@@ -6,51 +6,48 @@ public class ArvoreBi<T extends Comparable<T>>  {
         raiz = null;
     }
 
-    public void inserir(T info){
+    public void inserir(T info) {
         Node<T> novo = new Node<T>(info);
-        if (raiz == null){
+        if (raiz == null) {
             raiz = novo;
             return;
         }
         Node<T> atual = raiz;
         do {
-            
-            if (atual.getInfo().compareTo(info) < 0){
-                if (atual.getEsquerda() != null){
+
+            if (atual.getInfo().compareTo(info) < 0) {
+                if (atual.getEsquerda() != null) {
                     atual = atual.getEsquerda();
-                }
-                else{
+                } else {
                     atual.setEsquerda(novo);
                     return;
                 }
-            }
-            else {
-                if (atual.getDireita() != null){
+            } else {
+                if (atual.getDireita() != null) {
                     atual = atual.getDireita();
-                }
-                else{
+                } else {
                     atual.setDireita(novo);
                     return;
                 }
             }
 
-        }while (true);
+        } while (true);
 
     }
 
-    public String listaInOrder(){
+    public String listaInOrder() {
         return listaInOrder(raiz);
     }
 
     private String listaInOrder(Node<T> node) {
         String aux = "";
-        if (node == null){
+        if (node == null) {
             return aux;
         }
-        if (node.getEsquerda() != null){
+        if (node.getEsquerda() != null) {
             aux += listaInOrder(node.getEsquerda());
         }
-        if(node != null){
+        if (node != null) {
             aux += node.getInfo().toString();
             aux += listaInOrder(node.getDireita());
         }
@@ -63,13 +60,13 @@ public class ArvoreBi<T extends Comparable<T>>  {
 
     private String listaPosOrder(Node<T> node) {
         String aux = "";
-        if (node == null){
+        if (node == null) {
             return aux;
         }
-        if (node.getDireita() != null){
+        if (node.getDireita() != null) {
             aux += listaPosOrder(node.getDireita());
         }
-        if(node != null){
+        if (node != null) {
             aux += node.getInfo().toString();
             aux += listaPosOrder(node.getEsquerda());
         }
@@ -82,14 +79,14 @@ public class ArvoreBi<T extends Comparable<T>>  {
 
     private String listaPreOrder(Node<T> node) {
         String aux = "";
-        if (node == null){
+        if (node == null) {
             return aux;
         }
         aux += node.getInfo().toString();
-        if (node.getEsquerda() != null){
+        if (node.getEsquerda() != null) {
             aux += listaPreOrder(node.getEsquerda());
         }
-        if (node.getDireita() != null){
+        if (node.getDireita() != null) {
             aux += listaPreOrder(node.getDireita());
         }
         return aux;
@@ -98,51 +95,46 @@ public class ArvoreBi<T extends Comparable<T>>  {
     public boolean localizar(T info) {
         this.ultimaBusca = 0;
         boolean localizou = true;
-        if (raiz == null){
+        if (raiz == null) {
             this.ultimaBusca = 1;
             return false;
         }
         Node<T> node = raiz;
-        do{
-            
+        do {
+
             this.ultimaBusca++;
-            if (node == null){                
+            if (node == null) {
                 localizou = false;
                 break;
             }
-            if (node.getInfo().compareTo(info) == 0){
+            if (node.getInfo().compareTo(info) == 0) {
                 localizou = true;
                 break;
             }
-            if (node.getInfo().compareTo(info)>0){
-                if (node.getEsquerda() != null){
+            if (node.getInfo().compareTo(info) > 0) {
+                if (node.getEsquerda() != null) {
                     node = node.getEsquerda();
-                }
-                else{
+                } else {
                     localizou = false;
                     break;
                 }
-            }
-            else{
-                if (node.getDireita() != null){
+            } else {
+                if (node.getDireita() != null) {
                     node = node.getDireita();
-                }
-                else{
+                } else {
                     localizou = false;
                     break;
                 }
 
             }
 
-        }while (node != null);
+        } while (node != null);
 
         return localizou;
     }
 
-    
-
     public int getUltimaBusca() {
         return ultimaBusca;
     }
-    
+
 }

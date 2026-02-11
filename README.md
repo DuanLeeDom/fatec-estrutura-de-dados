@@ -79,7 +79,7 @@ Para executar e compreender os projetos contidos neste repositório, recomenda-s
 
 ## 📊 Status do Projeto
 
-![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-Concluido✅-blue)
 
 Este repositório contempla o material do 3º semestre de 2025 e será atualizado conforme o avanço das aulas e projetos.
 
